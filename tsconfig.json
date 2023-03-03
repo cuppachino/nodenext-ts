@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    /* Output settings */
+    "module": "NodeNext",
+    "target": "ES2018",
+    "moduleResolution": "nodenext",
+    "lib": [
+      "ES2018"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./pkg/*"
+      ]
+    },
+    "sourceRoot": "pkg/",
+    "rootDir": "pkg/",
+    "outDir": "dist/",
+    "declarationDir": "dist/",
+    "tsBuildInfoFile": "dist/.tsbuildinfo",
+    /* Good habits */
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importsNotUsedAsValues": "error",
+    "incremental": true,
+    "isolatedModules": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "preserveConstEnums": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true
+  },
+  "include": [
+    "pkg/"
+  ],
+  "exclude": [
+    "node_modules/",
+    "dist/",
+  ]
+}

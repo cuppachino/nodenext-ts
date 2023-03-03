@@ -1,0 +1,57 @@
+{
+  "name": "nodenext-ts",
+  "license": "MIT",
+  "author": "cuppachino <cuppachino.dev@gmail.com>",
+  "description": "Opinionated nodejs kit for fast module development",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./types": "./dist/index.d.ts",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "./dist/**/*.js",
+    "./dist/**/*.cjs",
+    "./dist/**/*.mjs",
+    "./dist/**/*.d.ts",
+    "!./dist/test/**/*",
+    "!./dist/**/*.test.js",
+    "!./dist/**/*.test.cjs",
+    "!./dist/**/*.test.njs",
+    "!./dist/**/*.test.d.ts",
+    "!.tsbuildinfo"
+  ],
+  "scripts": {
+    "build": "tsc --project .",
+    "clean": "rimraf ./dist",
+    "dev": "tsx watch ./pkg",
+    "format": "prettier -w ./pkg",
+    "lint": "eslint ./pkg",
+    "lint:fix": "eslint ./pkg --fix",
+    "test": "vitest --watch=false",
+    "test:watch": "vitest --watch",
+    "coverage": "vitest --coverage --watch=false",
+    "coverage:watch": "vitest --coverage --watch",
+    "save": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish",
+    "preview": "npm publish --dry-run --no-git-checks"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@cuppachino/eslint-config": "^0.2.0",
+    "@types/node": "^18.14.5",
+    "@vitest/coverage-c8": "^0.29.2",
+    "prettier": "latest",
+    "rimraf": "^4.2.0",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4",
+    "vitest": "^0.29.2"
+  }
+}
